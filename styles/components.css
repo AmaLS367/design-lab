@@ -1,0 +1,17 @@
+.components .card h5{margin-bottom:6px}
+.components .card p{min-height:40px}
+.price ul{margin:0 0 10px 16px; color:var(--muted)}
+.price .btn{justify-self:start}
+
+.btn.github{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 12px;
+  border:1px solid var(--outline);
+  border-radius:12px;
+  background: linear-gradient(180deg, hsl(var(--hue) 15% 12%/.65), hsl(var(--hue) 12% 9%/.65));
+  color:var(--text);
+  box-shadow: var(--shadow);
+}
+.btn.github:hover{ transform: translateY(-1px); border-color:hsl(var(--hue) 35% 55%/.35); }
+.btn.github:focus-visible{ outline:2px solid var(--primary); outline-offset:2px; }
+.btn.github svg{ display:block; width:18px; height:18px; }

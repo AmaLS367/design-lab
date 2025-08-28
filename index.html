@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Design Lab — Interactive Showcase</title>
+  <meta name="description" content="Лаборатория дизайна: токены, компоненты, анимации, эксперименты." />
+  <link rel="stylesheet" href="./styles/tokens.css" />
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/layout.css" />
+  <link rel="stylesheet" href="./styles/components.css" />
+  <link rel="stylesheet" href="./styles/animations.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">DL</div>
+      <div class="brand-text">
+        <strong>Design Lab</strong>
+        <span>Портфолио интерфейсного дизайна</span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#home" data-route>Главная</a>
+      <a href="#components" data-route>Компоненты</a>
+      <a href="#animations" data-route>Анимации</a>
+      <a href="#experiments" data-route>Эксперименты</a>
+      <a href="#case" data-route>Кейс</a>
+    </nav>
+    <div class="actions">
+      <button id="panel-toggle" class="btn ghost" title="Панель">Панель</button>
+      <a class="btn github" href="https://github.com/AmaLS367" target="_blank" rel="noopener" aria-label="GitHub">
+        <svg viewBox="0 0 16 16" width="18" height="18" aria-hidden="true">
+          <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2 .37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08 2.11.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.74.54 1.49 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        <span>Git</span>
+      </a>
+    </div>
+  </header>
+
+  <aside class="panel" id="control-panel">
+    <h3>Панель управления</h3>
+    <div class="control">
+      <label for="radius">Radius</label>
+      <input type="range" id="radius" min="4" max="28" step="1" value="16">
+    </div>
+    <div class="control">
+      <label for="hue">Hue</label>
+      <input type="range" id="hue" min="0" max="360" step="1" value="265">
+    </div>
+    <div class="control">
+      <label for="sat">Saturation</label>
+      <input type="range" id="sat" min="60" max="110" step="1" value="92">
+    </div>
+    <div class="control">
+      <label for="shadow">Shadow</label>
+      <input type="range" id="shadow" min="0" max="1" step="0.05" value="0.35">
+    </div>
+  </aside>
+
+  <main class="viewport">
+    <!-- HOME -->
+    <section class="route" data-route="home">
+      <div class="hero">
+        <div class="hero-text">
+          <h1>Код как кисть. Интерфейс как холст.</h1>
+          <p>Дизайн‑система на CSS‑токенах, модульные паттерны, чистая типографика и физически правдоподобные анимации.</p>
+          <div class="cta">
+            <a class="btn primary" data-route href="#components">Смотреть UI‑кит</a>
+            <a class="btn ghost" data-route href="#animations">Смотреть анимации</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid cards">
+        <article class="card">
+          <h3>Токены</h3>
+          <p>Цвет, типографика, тени, радиусы. Быстрая тема через CSS‑переменные.</p>
+        </article>
+        <article class="card">
+          <h3>Сетка</h3>
+          <p>12‑колоночная адаптивная сетка. Встроенная модульная разметка.</p>
+        </article>
+        <article class="card">
+          <h3>Скорость</h3>
+          <p>Ноль зависимостей. Открывается локально как статик.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- COMPONENTS -->
+    <section class="route" data-route="components" hidden>
+      <h2 class="section-title">Компоненты</h2>
+      <div class="grid components">
+        <div class="ui-slab">
+          <h4>KIT / Buttons</h4>
+          <div class="row gap">
+            <button class="btn primary">Primary</button>
+            <button class="btn secondary">Secondary</button>
+            <button class="btn ghost">Ghost</button>
+            <button class="btn danger">Danger</button>
+          </div>
+        </div>
+
+        <div class="ui-slab">
+          <h4>Cards</h4>
+          <div class="row gap">
+            <article class="card interactive">
+              <h5>Glass</h5>
+              <p>Полупрозрачность + размытый фон.</p>
+              <button class="btn ghost">Подробнее</button>
+            </article>
+            <article class="card soft">
+              <h5>Soft</h5>
+              <p>Мягкие тени, скругления и диффузия.</p>
+              <button class="btn ghost">Подробнее</button>
+            </article>
+            <article class="card outline">
+              <h5>Outline</h5>
+              <p>Тонкий контур, высокая контрастность.</p>
+              <button class="btn ghost">Подробнее</button>
+            </article>
+          </div>
+        </div>
+
+        <div class="ui-slab">
+          <h4>Form</h4>
+          <form class="form">
+            <label>Имя
+              <input type="text" placeholder="Ама">
+            </label>
+            <label>Email
+              <input type="email" placeholder="you@example.com">
+            </label>
+            <label>Сообщение
+              <textarea rows="3" placeholder="Коротко по делу"></textarea>
+            </label>
+            <div class="row gap">
+              <label class="switch">
+                <input type="checkbox" id="demoSwitch">
+                <span>Подтверждаю</span>
+              </label>
+              <button type="submit" class="btn primary">Отправить</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="ui-slab">
+          <h4>Pricing</h4>
+          <div class="row gap wrap">
+            <div class="price">
+              <div class="tag">Start</div>
+              <div class="cost">$19</div>
+              <ul>
+                <li>Базовые компоненты</li>
+                <li>1 тема</li>
+                <li>MIT</li>
+              </ul>
+              <button class="btn secondary">Купить</button>
+            </div>
+            <div class="price focus">
+              <div class="tag">Pro</div>
+              <div class="cost">$49</div>
+              <ul>
+                <li>Расширенный UI‑кит</li>
+                <li>3 темы</li>
+                <li>Использование в коммерции</li>
+              </ul>
+              <button class="btn primary">Купить</button>
+            </div>
+            <div class="price">
+              <div class="tag">Team</div>
+              <div class="cost">$99</div>
+              <ul>
+                <li>Дизайн‑система</li>
+                <li>Командная лицензия</li>
+                <li>Figma + код</li>
+              </ul>
+              <button class="btn secondary">Купить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANIMATIONS -->
+    <section class="route" data-route="animations" hidden>
+      <h2 class="section-title">Анимации</h2>
+      <div class="grid animations">
+        <div class="anim demo spinner"></div>
+        <div class="anim demo shimmer"></div>
+        <div class="anim demo pulse"></div>
+        <div class="anim demo float"></div>
+        <div class="anim demo bounce"></div>
+        <div class="anim demo card3d">
+          <div class="inner">
+            <span>3D</span>
+          </div>
+        </div>
+        <div class="anim demo morph">
+          <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="hsl(var(--hue) 80% 60%)"/>
+                <stop offset="100%" stop-color="hsl(calc(var(--hue) + 60) 80% 60%)"/>
+              </linearGradient>
+            </defs>
+            <path id="blob" fill="url(#g1)"></path>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIMENTS -->
+    <section class="route" data-route="experiments" hidden>
+      <h2 class="section-title">Эксперименты</h2>
+      <div class="grid experiments">
+        <article class="card glass">
+          <h5>Glassmorphism</h5>
+          <p>Фон‑blur + подсветка контура.</p>
+        </article>
+        <article class="card soft">
+          <h5>Neumorphism</h5>
+          <p>Двойные тени для пластичности.</p>
+        </article>
+        <article class="card outline">
+          <h5>Clay</h5>
+          <p>Матовый материал + контур.</p>
+        </article>
+        <article class="card gradient">
+          <h5>Gradients</h5>
+          <p>Двухтональные переходы с шумом.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CASE -->
+    <section class="route" data-route="case" hidden>
+      <h2 class="section-title">Кейс‑шаблон</h2>
+      <article class="case">
+        <header>
+          <h3>Редизайн панели аналитики</h3>
+          <p>Цель: повысить сканируемость и скорость принятия решения.</p>
+        </header>
+        <div class="case-grid">
+          <div class="case-block">
+            <h4>Проблема</h4>
+            <p>Шумной UI, слабый иерархический контраст, перегруз метрик.</p>
+          </div>
+          <div class="case-block">
+            <h4>Гипотеза</h4>
+            <p>Свести стиль к типографике + цветовая семантика + одно действие на экран.</p>
+          </div>
+          <div class="case-block">
+            <h4>Решения</h4>
+            <ul>
+              <li>Сетка 12 + модуль baselines</li>
+              <li>Семантика цвета: успех/внимание/ошибка</li>
+              <li>Компонентные карточки</li>
+            </ul>
+          </div>
+          <div class="case-block">
+            <h4>Результат</h4>
+            <p>−23% время нахождения нужной метрики, +18% CTR критичных кнопок.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© Design Lab. Без зависимостей. Чистый HTML/CSS/JS.</small>
+  </footer>
+
+  <script src="./scripts/app.js"></script>
+</body>
+</html>

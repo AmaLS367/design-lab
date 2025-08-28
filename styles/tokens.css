@@ -1,0 +1,25 @@
+:root{
+  --radius:16px;
+  --shadow-strength:0.35;
+  --hue:265;
+  --sat:92%;
+
+  --bg: hsl(var(--hue) 15% 8%);
+  --bg-soft: hsl(var(--hue) 20% 12%);
+  --panel: hsl(var(--hue) 18% 10%/0.6);
+  --card: hsl(var(--hue) 20% 14%/0.75);
+  --surface: hsl(var(--hue) 20% 16%/0.6);
+  --text: hsl(var(--hue) 12% 92%);
+  --muted: hsl(var(--hue) 8% 70%);
+  --primary: hsl(var(--hue) var(--sat) 60%);
+  --primary-600: hsl(var(--hue) var(--sat) 52%);
+  --success: hsl(155 90% 46%);
+  --warn: hsl(40 95% 52%);
+  --danger: hsl(355 84% 58%);
+
+  --outline: hsl(var(--hue) 20% 55%/0.25);
+  --shadow: 0 10px 30px hsl(var(--hue) 40% 2%/calc(var(--shadow-strength) + 0.05));
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
