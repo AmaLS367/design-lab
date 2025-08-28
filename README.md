@@ -84,8 +84,6 @@ design-lab/
 
 [Ama](https://github.com/AmaLS367)
 
-````
-
 ---
 
 ## Design Lab (EN)
